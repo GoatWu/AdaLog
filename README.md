@@ -1,6 +1,6 @@
 ## AdaLog: Post-Training Quantization for Vision Transformers with Adaptive Logarithm Quantizer
 
-This repository contains the official PyTorch implementation for the ECCV2024 paper "AdaLog: Post-Training Quantization for Vision Transformers with Adaptive Logarithm Quantizer". AdaLog adapts the logarithmic base to accommodate the power-law-like distribution of activations, and simultaneously allows for hardware-friendly quantization and de-quantization. By further employing the bias reparameterization, AdaLog Quantizer is applicable to both the post-Softmax and post-GeLU activations. The Fast Progressive Combining Search (FPCS) strategy is used to select the best logarithm base for AdaLog quantizers, as well as those scaling factors and zero points for uniform quantizers.
+This repository contains the official PyTorch implementation for the ECCV2024 paper "[AdaLog: Post-Training Quantization for Vision Transformers with Adaptive Logarithm Quantizer](https://arxiv.org/abs/2407.12951)". AdaLog adapts the logarithmic base to accommodate the power-law-like distribution of activations, and simultaneously allows for hardware-friendly quantization and de-quantization. By further employing the bias reparameterization, AdaLog Quantizer is applicable to both the post-Softmax and post-GeLU activations. The Fast Progressive Combining Search (FPCS) strategy is used to select the best logarithm base for AdaLog quantizers, as well as those scaling factors and zero points for uniform quantizers.
 
 ![adalog](./assets/framework.png)
 
