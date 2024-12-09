@@ -430,7 +430,7 @@ class AsymmetricallyBatchingQuantLinear(PTQSLBatchingQuantLinear):
         return best_index
         
     def calculate_percentile_weight_candidates(self, l=0.9, r=1.0):
-        num_zp = self.w_quantizer.n_levels
+        num_zp = min(16, self.w_quantizer.n_levels)
         num_scale = int(self.eq_n / num_zp)
         pct = torch.tensor([l, r])
         w_uppers_candidates = torch.quantile(

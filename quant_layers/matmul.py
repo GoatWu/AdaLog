@@ -209,7 +209,7 @@ class AsymmetricallyBatchingQuantMatMul(PTQSLBatchingQuantMatMul):
         return best_index
     
     def calculate_percentile_candidates(self, x, l=0.9, r=1.0):
-        num_zp = self.B_quantizer.n_levels
+        num_zp = min(16, self.B_quantizer.n_levels)
         num_scale = int(self.eq_n / num_zp)
         percentiles_uppers, percentiles_lowers = [], []
         pct = torch.tensor([l, r])
